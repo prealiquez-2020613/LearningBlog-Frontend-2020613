@@ -1,103 +1,15 @@
 export const CardPost = ({ title, category, content, author }) => {
     return (
-        <div className="max-w-md w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-4">
-                <h2 className="font-semibold text-lg">{title}</h2>
-                <div className="flex items-center mt-2">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-lg font-semibold">
-                        {author.charAt(0)}
-                    </div>
-                    <div className="ml-4">
-                        <h3 className="font-semibold text-sm">{author}</h3>
-                        <p className="text-white/70 text-xs">{category}</p>
-                    </div>
+        <div className="max-w-sm w-full bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="p-6">
+                <h5 className="text-xl font-semibold mb-2">{title}</h5>
+                <h6 className="text-lg text-gray-600 mb-2">{author}</h6>
+                <p className="text-sm text-gray-800 mb-4">{content}</p>
+                <p className="text-sm text-gray-500">{category}</p>
+                <div className="mt-4 flex space-x-4">
+                    <a href="#" className="text-blue-500 hover:underline">Card link</a>
+                    <a href="#" className="text-blue-500 hover:underline">Another link</a>
                 </div>
-            </div>
-
-            <div className="px-4 pb-4">
-                <p className="text-sm">{content}</p>
-            </div>
-
-            <div className="flex justify-between items-center p-4 text-white/70">
-                <button className="flex items-center space-x-2 hover:text-blue-200">
-                    <svg
-                        viewBox="0 0 16 16"
-                        className="bi bi-graph-up-arrow"
-                        fill="currentColor"
-                        height="16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
-                            fill-rule="evenodd"
-                        ></path>
-                    </svg>
-                    <span>5</span>
-                </button>
-                <button className="flex items-center space-x-2 hover:text-green-200">
-                    <svg
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M5 10l7-7m0 0l7 7M12 3v18"
-                            stroke-width="2"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                        ></path>
-                    </svg>
-                    <span>3</span>
-                </button>
-                <button className="flex items-center space-x-2 hover:text-green-200">
-                    <svg
-                        viewBox="0 0 16 16"
-                        className="bi bi-chat-left"
-                        fill="currentColor"
-                        height="16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-                        ></path>
-                    </svg>
-                    <span>3</span>
-                </button>
-                <button className="flex items-center space-x-2 hover:text-pink-200">
-                    <svg
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M20.84 4.61a5.5 5.5 0 00-7.78-.61l-.7.7-.7-.7a5.5 5.5 0 00-7.78.61c-2.19 2.36-2.12 6.14.18 8.55L12 21.35l8.22-8.19c2.3-2.41 2.37-6.19.18-8.55z"
-                            stroke-width="2"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                        ></path>
-                    </svg>
-                    <span>12</span>
-                </button>
-                <button className="flex items-center space-x-2 hover:text-white">
-                    <svg
-                        viewBox="0 0 16 16"
-                        className="bi bi-share"
-                        fill="currentColor"
-                        height="16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"
-                        ></path>
-                    </svg>
-                </button>
             </div>
         </div>
     );

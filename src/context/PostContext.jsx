@@ -5,9 +5,9 @@ export const PostsContext = createContext();
 
 export const PostProvider = ({children}) => {
 
-    const { posts, isFetchingPosts, getPosts } = useApi();
+    const { posts, isFetchingPosts, getPost } = useApi();
     useEffect(() => {
-        getPosts()
+        getPost()
     }, [])
     
   return (

@@ -9,7 +9,7 @@ const apiClient = axios.create(
 
 export const getPostsRequest = async()=>{
   try {
-    return await apiClient.post('/v1/post/getAllPosts')
+    return await apiClient.get('/v1/post/getAllPosts')
   } catch (err) {
     return {error : true, err}
   }
