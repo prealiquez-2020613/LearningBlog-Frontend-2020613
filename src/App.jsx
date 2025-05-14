@@ -1,7 +1,6 @@
 import { Toaster } from 'react-hot-toast'
 import { useRoutes } from 'react-router-dom'
 import { routes } from './routes'
-import { PostProvider } from './context/PostContext'
 
 function App () {
 
@@ -9,9 +8,7 @@ function App () {
 
   return (
     <>
-      <PostProvider>
         {elementRoutes}
-      </PostProvider>
       <Toaster position='bottom-center' reverseOrder={false} />
     </>
   )

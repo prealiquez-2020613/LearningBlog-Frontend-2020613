@@ -1,5 +1,5 @@
-import { Posts } from "./components/Posts/Posts";
+import { PostsPage } from "./pages/PostsPage";
 
 export const routes = [
-    {path:'/posts',element:<Posts/>},
+    {path:'/posts',element:<PostsPage/>},
 ]
