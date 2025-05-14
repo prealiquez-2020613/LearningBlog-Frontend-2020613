@@ -17,9 +17,7 @@ export const Posts = () => {
       <div className="mb-3 flex items-center justify-center">
         <h2 className="text-xl font-semibold">Mis publicaciones</h2>
       </div>
-      <div className="flex items-center justify-center">
-      </div>
-      <div className="w-full mt-5 space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {
           posts.map(post => (
             <CardPost
