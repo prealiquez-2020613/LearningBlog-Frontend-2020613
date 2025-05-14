@@ -32,8 +32,7 @@ export const CardPost = ({ title, category, content, author }) => {
 
                 <p className="text-sm text-gray-500">{category}</p>
                 <div className="mt-4 flex space-x-4">
-                    <a href="#" className="text-blue-500 hover:underline">Card link</a>
-                    <a href="#" className="text-blue-500 hover:underline">Another link</a>
+                    <a href="#" className="text-blue-500 hover:underline">Comentarios</a>
                 </div>
             </div>
         </div>
