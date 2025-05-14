@@ -40,7 +40,7 @@ export const useApi = () => {
     posts,
     isFetchingPosts: !posts,
     addCommentary,
-    getPost,
+    getPosts,
     comments,
     isFetchingComments: !comments,
     getComments
