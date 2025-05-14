@@ -13,7 +13,6 @@ export const CardPost = ({ title, category, content, author }) => {
                 <h5 className="text-xl font-semibold">{title}</h5>
                 <h6 className="text-lg text-gray-600">{author}</h6>
 
-                {/* Contenedor del contenido */}
                 <div 
                     className={`text-sm text-gray-800 mb-2 ${
                         isExpanded ? '' : 'truncate'
