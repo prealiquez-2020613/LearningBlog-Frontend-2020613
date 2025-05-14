@@ -23,9 +23,9 @@ export const Posts = () => {
             <CardPost
               key={post._id}
               title={post.title}
-              category={post.category.name}
+              category={post.category}
               content={post.content}
-              author={post.author.username}
+              author={post.author}
             />
           ))
         }
