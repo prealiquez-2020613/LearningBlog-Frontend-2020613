@@ -12,11 +12,38 @@ export const useApi = () => {
                 response?.err?.response?.data?.message || 'Error al obtener las publicaciones'
             )
         }
+        setPosts(response.data.posts)
     }
 
-  return (
-    <div>
-      
-    </div>
-  )
+    const addCommentary = async (comment) => {
+        const response = await addCommentaryRequest(comment);
+        if(response.error){
+            return toast.error(
+                response?.err?.response?.data?.message || 'Error al agregar comentario'
+            )
+        }
+        return toast.success('Comentario agregado')
+    }
+
+    const [comments, setComments] = useState(null);
+    const getComments = async () => {
+        const response = await getCommentsByPostRequest();
+        if(response.error){
+            return toast.error(
+                response?.err?.response?.data?.message || 'Error al obtener los comentarios'
+            )
+        }
+        setComments(response.data.comments)
+    }
+
+  return {
+    posts,
+    isFetchingPosts: !posts,
+    addCommentary,
+    getPost,
+    comments,
+    isFetchingComments: !comments,
+    getComments
+
+  }
 }
