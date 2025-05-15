@@ -3,5 +3,5 @@ import { PostCommentsPage } from './pages/CommentsPage'
 
 export const routes = [
     {path:'/posts',element:<PostsPage/>},
-    {path:'/comments',element:<PostCommentsPage/>},
+    {path: '/posts/:postId/comments', element: <PostCommentsPage />}
 ]

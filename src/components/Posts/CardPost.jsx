@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-export const CardPost = ({ title, category, content, author }) => {
+export const CardPost = ({ _id, title, category, content, author }) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
     const toggleExpand = () => {
@@ -32,7 +33,9 @@ export const CardPost = ({ title, category, content, author }) => {
 
                 <p className="text-sm text-gray-500">{category}</p>
                 <div className="mt-4 flex space-x-4">
-                    <a href="#" className="text-blue-500 hover:underline">Comentarios</a>
+                    <Link to={`/posts/${_id}/comments`} className="text-blue-500 hover:underline">
+                        Comentarios
+                    </Link>
                 </div>
             </div>
         </div>

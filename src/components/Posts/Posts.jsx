@@ -22,6 +22,7 @@ export const Posts = () => {
           posts.map(post => (
             <CardPost
               key={post._id}
+              _id={post._id}
               title={post.title}
               category={post.category}
               content={post.content}
