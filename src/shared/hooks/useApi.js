@@ -26,8 +26,9 @@ export const useApi = () => {
     }
 
     const [comments, setComments] = useState(null);
-    const getComments = async () => {
-        const response = await getCommentsByPostRequest();
+    const getComments = async (postId) => {
+        if (!postId) return;
+        const response = await getCommentsByPostRequest(postId);
         if(response.error){
             return toast.error(
                 response?.err?.response?.data?.message || 'Error al obtener los comentarios'
