@@ -23,9 +23,9 @@ export const addCommentaryRequest = async(comment)=>{
   }
 }
 
-export const getCommentsByPostRequest = async()=>{
+export const getCommentsByPostRequest = async(postId)=>{
   try {
-    return await apiClient.post('/v1/Commentary/getCommentsByPost')
+    return await apiClient.get(`/v1/Commentary/getCommentsByPost/${postId}`)
   } catch (err) {
     return {error : true, err}
   }
