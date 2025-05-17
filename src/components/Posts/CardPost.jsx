@@ -19,10 +19,10 @@ export const CardPost = ({ _id, title, category, content, author }) => {
                         isExpanded ? '' : 'truncate'
                     } overflow-hidden`}
                 >
-                    {isExpanded ? content : content.length > 100 ? `${content.substring(0, 100)}...` : content}
+                    {isExpanded ? content : content.length > 50 ? `${content.substring(0, 100)}...` : content}
                 </div>
 
-                {content.length > 100 && (
+                {content.length > 50 && (
                     <button 
                         onClick={toggleExpand} 
                         className="text-blue-500 hover:underline"
