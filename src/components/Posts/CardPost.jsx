@@ -1,18 +1,29 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export const CardPost = ({ _id, title, category, content, author }) => {
+export const CardPost = ({ _id, title, category, content, author, createdAt }) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded)
     }
 
+    const formattedDate = createdAt
+    ? new Date(createdAt).toLocaleDateString(undefined, {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      })
+    : ''
+
     return (
         <div className="max-w-sm w-full bg-white shadow-lg rounded-lg overflow-hidden p-4">
             <div className="space-y-3">
                 <h5 className="text-xl font-semibold">{title}</h5>
                 <h6 className="text-lg text-gray-600">{author}</h6>
+                <div className="flex items-center justify-between text-gray-600 text-sm">
+                    {formattedDate && <span>{formattedDate}</span>}
+                </div>
 
                 <div 
                     className={`text-sm text-gray-800 mb-2 ${
